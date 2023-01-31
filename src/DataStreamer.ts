@@ -15,7 +15,7 @@ export interface ServerRespond {
 
 class DataStreamer {
   // The url where datafeed server is listening
-  static API_URL: string = 'http://localhost:8080/query?id=1';
+  static API_URL: string = 'http://localhost:5000/query?id=1';
 
   /**
    * Send request to the datafeed server and executes callback function on success
@@ -29,7 +29,7 @@ class DataStreamer {
       if (request.status === 200) {
         callback(JSON.parse(request.responseText));
       } else {
-        alert ('Request failed');
+        alert('Request failed');
       }
     }
 
